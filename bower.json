@@ -1,0 +1,28 @@
+{
+  "name": "ct-jquery-nth-child",
+  "description": "A polyfill for :nth-child",
+  "version": "1.0.1",
+  "main": "dist",
+  "license": "All rights reserved",
+  "keywords": [],
+  "authors": [
+    {
+      "name": "Dan Smith",
+      "email": "dan.smith@chrometoaster.com"
+    }
+  ],
+  "homepage": "http://github.com/chrometoasters/ct-jquery-nth-child",
+  "repository": {
+    "type": "github",
+    "url": "http://github.com/chrometoasters/ct-jquery-nth-child.git"
+  },
+  "dependencies": {
+    "jquery": "1.10.1"
+  },
+  "devDependencies": {},
+  "private": true,
+  "ignore": [
+    "bower_components/",
+    "dev/"
+  ]
+}
