@@ -2,25 +2,25 @@
 
 ( function($) {
 
-    var $body = $('body');
-    var $container = $('.polyfill'); // this must be present in the page, wrapping the content you wish to polyfill
+    var $container = $('.polyfill'); // this must be present in the page, wrapping the .polyfill--contents you wish to polyfill
+    var $contents = $('.polyfill--contents');
     var parent_selector = '[class^="l-custom"], [class*=" l-custom"]';
     var polyfill_class = 'nth-child-';
 
-    if ( ! $body.length || ! $container.length ) {
+    if ( ! $container.length || ! $contents.length ) {
         return;
     }
 
     // detach container from DOM for heavy manipulation of contents
     // http://flippinawesome.org/2013/11/25/writing-better-jquery-code/
-    $container.detach();
+    $contents.detach();
 
     // NTH-CHILD
     // http://jsfiddle.net/dotherightthing/3ppxz/
 
-    var $custom_layouts = $container.find( parent_selector );
+    var $layouts = $contents.find( parent_selector );
 
-    $custom_layouts.each(function (i, item) {
+    $layouts.each(function (i, item) {
 
         setTimeout( function() {
 
@@ -36,6 +36,6 @@
     });
 
     // reattach container to DOM
-    $body.append( $container );
+    $container.append( $contents );
 
 })(jQuery);
